@@ -19,7 +19,7 @@ Syriatel, a telecommunications company, is facing a high churn rate, with many c
 # Your Task : Predict customer churn using a classification algorithm model
 
 
-![800px-SyriaTel.jpg%20%28800%C3%97313%29%20-%20Google%20Chrome%2010_16_2023%208_34_06%20PM.png](attachment:800px-SyriaTel.jpg%20%28800%C3%97313%29%20-%20Google%20Chrome%2010_16_2023%208_34_06%20PM.png)
+
 
 
 
@@ -121,7 +121,7 @@ According to the model international plan,customer service calls and voice mail 
 
 
 
-The ROC curve analysis shows that the XGBClassifier has the best performance, followed by the RandomForestClassifier, DecisionTreeClassifier, and LogisticRegression. The XGBClassifier has the highest AUC score of 0.93, while the DecisionTree has the lowest AUC score of 0.79.
+The ROC curve analysis shows that the XGBClassifier has the best performance, followed by the RandomForestClassifier, LogisticRegression and Decision Tree Classifier.The XGBClassifier has the highest AUC score of 0.93, while the DecisionTree has the lowest AUC score of 0.79.
 
 The ROC curve is a graphical plot that shows the trade-off between the true positive rate (TPR) and the false positive rate (FPR) for a binary classifier. The TPR is the proportion of positive instances that are correctly classified, while the FPR is the proportion of negative instances that are incorrectly classified. The AUC is the area under the ROC curve, and it is a measure of the overall performance of the classifier.
 
@@ -129,7 +129,7 @@ A higher AUC score indicates that the classifier is better at distinguishing bet
 
 
 
-The tuned XGBoost classifier model has a recall score of 0.81, meaning This means that the model can identify around 77% of the actual positive instances correctly.
+The tuned XGBoost classifier model has a recall score of 0.81, meaning that XGBoost model slightly improved after tuning This means that the model can identify around 81% of the actual positive instances correctly.
 
 According to this model,international plan,voice mail plan and customer service calls are the top three most important features.
 
