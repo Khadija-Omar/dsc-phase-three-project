@@ -6,7 +6,7 @@
 Customer churn, also known as customer attrition or customer defection, is a critical metric in businesses, particularly in subscription-based services and industries with recurring revenue models. Churn refers to the rate at which customers discontinue their relationship with a company or cancel their subscription to a service or product.
 
 
-In the business context, customer churn is a significant concern due to its potential adverse effects on a company's revenue, growth, and overall sustainability. Understanding and mitigating customer churn is essential for maintaining a healthy customer base and fostering long-term success.This project focuses on analyzing the churn dataset from the telecom industry to predict customer churn and gain insights into the key factors driving churn.
+In the business context, customer churn is a significant concern due to its potential adverse effects on a company's revenue, growth, and overall sustainability. Understanding and mitigating customer churn is essential for maintaining a healthy customer base and fostering long-term success. This project focuses on analyzing the churn dataset from the telecom industry to predict customer churn and gain insights into the key factors driving churn.
 
 
 # Business Understanding
@@ -16,7 +16,7 @@ Syriatel, a telecommunications company, is facing a high churn rate, with many c
 
 
 
-# Your Task : Predict customer churn using a classification algorithm model
+# Your Task: Predict customer churn using a classification algorithm model
 
 
 
@@ -26,17 +26,17 @@ Syriatel, a telecommunications company, is facing a high churn rate, with many c
 # Data Understanding
 
 
-This dataset was obtained from kaggle , "https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset" . It contains 3333 entries and 21 columns . We will focus on getting familiar with the data and identifying any potential data quality issues. We will also perform some initial exploratory data analysis to discover first insights into the data.
+This dataset was obtained from Kaggle, "https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset". It contains 3333 entries and 21 columns. We will focus on getting familiar with the data and identifying any potential data quality issues. We will also perform some initial exploratory data analysis to discover first insights into the data.
 
 
 The dataset provided information on the following features for each customer:
 
-State , Length of account , Area code , Phone numbers , If the customer has an international plan , If the customer has a voicemail plan , No. of voicemail messages , Breakdown of call minutes for day, evening, night, and international , Breakdown of call charges for day, evening, night, and international , Breakdown of no. of calls for day, evening, night, and international , No. of calls to customer service , If they have churned.
+State, Length of account, Area code, Phone numbers, If the customer has an international plan, If the customer has a voicemail plan, No. of voicemail messages, Breakdown of call minutes for day, evening, night, and international, Breakdown of call charges for day, evening, night, and international, Breakdown of no. of calls for day, evening, night, and international, No. of calls to customer service, If they have churned.
 
 
 # Data Preparation
 
-In this section, we are going to do several actions to prepare our data for exploratory data analysis and modelling. First, we will import all the necessary libraries, load the dataset using pandas library, preview the data (how many features a records, as well as statistical features), and conduct thorough data preprocessing (checking and removing any missing values and transforming data).
+In this section, we are going to do several actions to prepare our data for exploratory data analysis and modeling. First, we will import all the necessary libraries, load the dataset using the pandas library, preview the data (how many features a record, as well as statistical features), and conduct thorough data preprocessing (checking and removing any missing values and transforming data).
 
 
 
@@ -46,22 +46,22 @@ In this section, we are going to do several actions to prepare our data for expl
 Following EDA analysis:
 
 
-Most of the customers are from West Virginia,Minnesota,NewYork,Alabama and Wisconsin.
+Most of the customers are from West Virginia, Minnesota, NewYork, Alabama, and Wisconsin.
 
-From the 3333 customers ,323 customers have international plan (that makes 9.7% of the customers) and 3010 customers do not have an international plan (that makes 90.3% of the customers)
-
-
-From the 3333 customers ,922 customers have a voice mail plan and 2411 customers do not have a voicemail plan.
+Of the 3333 customers,323 customers have an international plan (that makes up 9.7% of the customers) and 3010 customers do not have an international plan (that makes up 90.3% of the customers)
 
 
-Out of the 3,333 customers in the dataset, 483 have terminated their contract. That is 14.5% of customers lost. The distribution of the binary classes shows a data imbalance. This needs to be addressed before modeling as an unbalanced feature can cause the model to make false predictions.
+Of the 3333 customers,922 customers have a voicemail plan and 2411 customers do not have a voicemail plan.
+
+
+Out of the 3,333 customers in the dataset, 483 have terminated their contracts. That is 14.5% of customers lost. The distribution of the binary classes shows a data imbalance. This needs to be addressed before modeling as an unbalanced feature can cause the model to make false predictions.
 
 
 
-Of the customers who have terminated their account, most of them are from area codes 415 and 510.
+Of the customers who have terminated their accounts, most of them are from area codes 415 and 510.
 
 
-Of all the customers that churned, majority are from Texas, New Jersey, Maryland,Miami and NewYork.
+Of all the customers that churned, the majority are from Texas, New Jersey, Maryland, Miami, and NewYork.
 
 
 
@@ -71,7 +71,7 @@ The majority of customers who churned did not have an international plan nor did
 # Modelling
 
 
-In this section, we will build a model that can predict the customer churn based on the features in our dataset. The model will be evaluated on the recall score.
+In this section, we will build a model that can predict customer churn based on the features in our dataset. The model will be evaluated on the recall score.
 
 In order to achieve the targets stipulated in the project proposal, we will be using the following algorithms:
 
@@ -91,7 +91,7 @@ The logistic regression model has a recall score of 0.74, which is actually good
 
 The confusion matrix evaluation showed that the model had a higher number of true positives and true negatives than false positives and false negatives. This indicates that the model is making correct predictions more often than incorrect ones and is not overfitting.
 
-According to the model,customer service calls,international plan and total day charges are the top three most important features.
+According to the model, customer service calls, international plans, and total day charges are the top three most important features.
 
 
 
@@ -99,14 +99,14 @@ The decision tree model has a recall score of 0.67, which is actually good but n
 
 The confusion matrix evaluation showed that the model had a higher number of true positives and true negatives than false positives and false negatives. This indicates that the model is making correct predictions more often than incorrect ones and is not overfitting.
 
-According to the model,customer service calls,total day minutes,international plan are the top three most important features.
+According to the model, customer service calls, total day minutes, and international plan are the top three most important features.
 
 
 The random forest classifier model has a recall score of 0.73, which is great compared to the previous model. This means that the model can identify around 73% of the actual positive instances correctly.
 
 The confusion matrix evaluation showed that the model had a higher number of true positives and true negatives than false positives and false negatives. This indicates that the model is making correct predictions more often than incorrect ones and is not overfitting.
 
-According to the model, customer service call,total day charge, total day minutes are the top three most important features.
+According to the model, customer service call, total day charges, and total day minutes are the top three most important features.
 
 
 
@@ -117,6 +117,7 @@ The confusion matrix evaluation showed that the model had a higher number of tru
 According to the model international plan,customer service calls and voice mail plan are the top three most important features.
 
 
+# Evaluation
 
 The ROC curve analysis shows that the XGBClassifier has the best performance, followed by the RandomForestClassifier, LogisticRegression and Decision Tree Classifier.The XGBClassifier has the highest AUC score of 0.93, while the DecisionTree has the lowest AUC score of 0.79.
 
