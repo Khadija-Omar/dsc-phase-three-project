@@ -61,14 +61,11 @@ Out of the 3,333 customers in the dataset, 483 have terminated their contract. T
 Of the customers who have terminated their account, most of them are from area codes 415 and 510.
 
 
-
 Of all the customers that churned, majority are from Texas, New Jersey, Maryland,Miami and NewYork.
 
 
 
 The majority of customers who churned did not have an international plan nor did they have a voicemail plan.
-
-
 
 
 # Modelling
